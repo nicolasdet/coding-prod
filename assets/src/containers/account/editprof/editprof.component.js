@@ -93,7 +93,7 @@ componentWillReceiveProps(nextProps){
         <Paper className="portal-pages__content-inner">
        <Typography variant="Title" component="h1" >Editer mon Profile :</Typography>
        <TextField
-              id="nom"
+              id="prenom"
               value={this.state.nom}
               onChange={(e) => {this.setState({nom: e.target.value});}}
               label="Nom"
@@ -109,8 +109,8 @@ componentWillReceiveProps(nextProps){
               margin="normal"
             />
             <br></br>
-          <TextField
-              id="nom"
+       <TextField
+              id="email"
               value={this.state.email}
               onChange={(e) => {this.setState({email: e.target.value});}}
               label="Mot de Passe"
@@ -118,10 +118,10 @@ componentWillReceiveProps(nextProps){
               margin="normal"
             />
             <br></br>
-            <Button color="primary" className={scss['button']} onClick={() => {this.retour()}}>
+            <Button id="retour" color="primary" className={scss['button']} onClick={() => {this.retour()}}>
             Retour
            </Button>
-            <Button variant="contained" color="primary"  onClick={() => {this.formSubmit()}}>
+            <Button id="valider" variant="contained" color="primary"  onClick={() => {this.formSubmit()}}>
   Modifier
 </Button>
         </Paper>
